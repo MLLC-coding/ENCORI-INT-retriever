@@ -3,7 +3,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 # Read miRNAs from a text file (one miRNA per line)
-with open("2_6mo_cortical_NDEV_DOWN.txt", "r") as file:
+with open("miR.txt", "r") as file:
     miRNAs = [line.strip() for line in file.readlines()]
 # Parameters
 params = {
@@ -17,7 +17,7 @@ params = {
     "cellType": "all"
 }
 # Output file
-output_file = "ENCORI_CLIP-seq_INT.txt"
+output_file = "raw_int_ENCORI.txt"
 # Clear the output file if it exists
 with open(output_file, "w") as file:
     pass 
@@ -48,3 +48,4 @@ for miRNA in miRNAs:
  
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data for {miRNA}: {e}")
+
