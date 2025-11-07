@@ -1,14 +1,37 @@
 # ENCORI-INT-retriever
-Tries to ease the recovery of interactions input: list of miRNAs, output: list of interactions for the miR provided in a txt file called response.
 
-The previous code has the following default parameters, but they can be edited in the script:
+INT-retriever automatizes the retrieval of miRNA–mRNA, miRNA–lncRNA, and miRNA–circRNA interactions from the ENCORI database through its web interface, displaying real-time progress indicators.
 
-    "assembly": "mm10" – This is the version of the genome used for everything, from creating the indices for both long and short sequences to obtaining the sequences of the mature miRNAs.
-    "geneType": "lncRNA" – Specifies the gene type as long non-coding RNA (lncRNA).
-    "clipExpNum": 1 – The minimum number of CLIP-seq experiments. CLIP-seq is considered a powerful enough technique that only 1 experiment is required.
-    "degraExpNum": 0 – The minimum number of degradome experiments supporting the interaction. It is set to 0 for the same reason as point 3.
-    "pancancerNum": 0 – No cancer-related data is needed.
-    "programNum": 1 – Only one program is needed for the interactions found through computational programs.
-    "program": "PITA" – No specific interaction prediction program is selected; "PITA" is the default.
-    "target": "all" – Captures all interactions.
-    "cellType": "all" – Includes all cell types.
+The tool is implemented in Python and can be executed either from the Windows IDLE environment or directly from the Python shell.
+
+🔧 Usage instructions
+
+**1)** Select the appropriate script:
+
+Use INT-recover-win.py for Windows IDLE.
+
+Use INT-recover.py for other environments.
+
+**2)** Prepare your input file:
+
+- Edit the miR.txt path field in the script to match your directory.
+
+- Create a tab-separated file named miR.txt containing your list of miRNAs in full species-specific format (e.g., hsa-miR-185-5p, mmu-miR-185-5p).
+
+- Include one miRNA per line, without a header.
+
+**3)** Set the output directory:
+
+Modify the output file path in the script (default: raw_int_ENCORI.txt) to match your preferred folder.
+
+**4)** Install dependencies:
+
+- Ensure the requests package is installed:
+**Other:**
+  pip install requests
+**Windows IDLE:**
+  import os
+os.system("pip install requests")
+**5)** Run the script
+
+
