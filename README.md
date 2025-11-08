@@ -9,6 +9,7 @@ The tool is implemented in Python and can be executed either from the Windows ID
 **1)** Select the appropriate script:
 
 -Use INT-retriever-win.py for Windows IDLE.
+
 -Use INT-retriever.py for other environments.
 
 **2)** Prepare your parameters and input file:
