@@ -8,8 +8,8 @@ The tool is implemented in Python and can be executed either from the Windows ID
 
 **1)** Select the appropriate script:
 
--Use INT-recover-win.py for Windows IDLE.
--Use INT-recover.py for other environments.
+-Use INT-retriever-win.py for Windows IDLE.
+-Use INT-retriever.py for other environments.
 
 **2)** Prepare your parameters and input file:
 - Choose the genome by editing the field next to "assembly", for example "mm10" (or "hg38" for human).
